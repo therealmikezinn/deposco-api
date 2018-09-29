@@ -1,7 +1,12 @@
 {
   "name": "deposco-api",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "main": "index.js",
+  "author": "Michael Zinn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/therealmikezinn/deposco-api.git"
+  },
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",

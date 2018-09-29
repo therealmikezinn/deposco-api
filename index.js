@@ -66,3 +66,5 @@ DeposcoClient.prototype = {
     });
   },
 };
+
+module.exports = DeposcoClient;

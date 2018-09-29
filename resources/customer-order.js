@@ -2,7 +2,7 @@ function CustomerOrderResource(client){
   this.client = client;
 }
 
-CustomerOrder.prototype = {
+CustomerOrderResource.prototype = {
   get(businessUnit, requestId){
     return this.client.request.get(`/import/${businessUnit}/status/${requestId}`)
   },

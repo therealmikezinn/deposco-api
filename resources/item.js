@@ -75,3 +75,6 @@ ItemResource.prototype = {
     });
   },
 };
+
+module.exports = ItemResource;
+

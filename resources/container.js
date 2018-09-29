@@ -14,7 +14,7 @@ ContainerResource.prototype = {
     });
   },
   get(id){
-    return this.client.request.get(`/container/${id}`)
+    return this.client.request.get(`/containers/${id}`)
   },
   update(id, data){
     return this.client.request.put(`/containers/${id}`, {

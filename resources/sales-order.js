@@ -4,22 +4,16 @@ function SalesOrderResource(client){
 
 SalesOrderResource.prototype = {
   create(data){
-    return this.client.request.post('/orders', {
-      data
-    });
+    return this.client.request.post('/orders', data);
   },
   bulkUpdate(data){
-    return this.client.request.post('/orders/updates', {
-      data
-    });
+    return this.client.request.post('/orders/updates', data);
   },
   get(id){
     return this.client.request.get(`/orders/Sales Order/${id}`);
   },
   update(id, data){
-    return this.client.request.put(`/orders/Sales Order/${id}`, {
-      data
-    });
+    return this.client.request.put(`/orders/Sales Order/${id}`, data);
   },
 };
 
