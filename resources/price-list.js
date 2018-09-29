@@ -4,9 +4,7 @@ function PriceListResource(client){
 
 PriceListResource.prototype = {
   create(businessUnit, data){
-    this.client.request.post(`/pricelists/${businessUnit}`, {
-      data,
-    });
+    this.client.request.post(`/pricelists/${businessUnit}`, data);
   },
   get(businessUnit){
     this.client.request.get(`/pricelists/${businessUnit}`);
@@ -24,9 +22,7 @@ PriceListResource.prototype = {
     this.client.request.get(`/pricelists/${businessUnit}/${facility}/${item}`);
   },
   update(businessUnit, priceListCode, data){
-    this.client.request.put(`/pricelists/${businessUnit}/${priceListCode}`, {
-      data,
-    });
+    this.client.request.put(`/pricelists/${businessUnit}/${priceListCode}`, data);
   },
 };
 

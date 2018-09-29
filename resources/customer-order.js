@@ -7,9 +7,7 @@ CustomerOrderResource.prototype = {
     return this.client.request.get(`/import/${businessUnit}/status/${requestId}`)
   },
   update(businessUnit, orderNumber, data){
-    return this.client.request.put(`/import/${businessUnit}/customerOrder/${orderNumber}`, {
-      data,
-    });
+    return this.client.request.put(`/import/${businessUnit}/customerOrder/${orderNumber}`, data);
   },
 };
 

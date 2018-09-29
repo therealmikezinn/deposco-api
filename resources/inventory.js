@@ -4,9 +4,7 @@ function InventoryResource(client){
 
 InventoryResource.prototype = {
   get(params){
-    return this.client.request.get('/inventory/full', {
-      params,
-    });
+    return this.client.request.get('/inventory/full', params);
   },
   getByLocation(facilityNumber, locationNumber){
     return this.client.request.get(`/inventory/facility/${facilityNumber}/location/${locationNumber}`);

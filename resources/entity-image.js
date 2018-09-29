@@ -4,9 +4,7 @@ function EntityImageResource(client){
 
 EntityImageResource.prototype = {
   create(data){
-    this.client.request.post('/images', {
-      data,
-    });
+    this.client.request.post('/images', data);
   },
 };
 

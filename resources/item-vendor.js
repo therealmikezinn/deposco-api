@@ -4,9 +4,7 @@ function ItemVendorResource(client){
 
 ItemVendorResource.prototype = {
   create(data){
-    this.client.request.post(`/itemVendor/updates`, {
-      data,
-    });
+    this.client.request.post(`/itemVendor/updates`, data);
   },
   get(itemNumber){
     this.client.request.get(`/itemVendor/${itemNumber}`);

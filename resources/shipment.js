@@ -4,14 +4,10 @@ function ShipmentResource(client){
 
 ShipmentResource.prototype = {
   create(data){
-    return this.client.request.put('/shipments', {
-      data,
-    });
+    return this.client.request.put('/shipments', data);
   },
   createByBusinessUnit(businessUnit, data){
-    return this.client.request.put(`/shipments/${businessUnit}`, {
-      data,
-    });
+    return this.client.request.put(`/shipments/${businessUnit}`, data);
   },
   get(businessUnit){
     return this.client.request.get(`/shipments/${businessUnit}`);

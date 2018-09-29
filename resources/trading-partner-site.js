@@ -4,9 +4,7 @@ function TradingPartnerSite(client){
 
 TradingPartnerSite.prototype = {
   create(data){
-    this.client.request.post('/tradingPartnerSite', {
-      data,
-    });
+    this.client.request.post('/tradingPartnerSite', data);
   },
   get(tpCode){
     return this.client.request.get(`/tradingPartnerSite/${tpCode}`);

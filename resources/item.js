@@ -4,9 +4,7 @@ function ItemResource(client){
 
 ItemResource.prototype = {
   create(data){
-    this.client.request.post('/items', {
-      data,
-    });
+    this.client.request.post('/items', data);
   },
   get(itemNumber){
     return this.client.request.get(`/items/${itemNumber}`);
@@ -45,34 +43,22 @@ ItemResource.prototype = {
     return this.client.request.get(`/items/${itemNumber}/reserveqty`);
   },
   getAtpsByDateRange(params){
-    return this.client.request.get(`/items/atpsByDateRange`, {
-      params,
-    });
+    return this.client.request.get(`/items/atpsByDateRange`, params);
   },
   update(itemNumber, data){
-    this.client.request.put(`/items/${itemNumber}`, {
-      data,
-    });
+    this.client.request.put(`/items/${itemNumber}`, data);
   },
   updatePacks(itemNumber, data){
-    this.client.request.put(`/items/${itemNumber}/packs`, {
-      data,
-    });
+    this.client.request.put(`/items/${itemNumber}/packs`, data);
   },
   updatePacksByBusinessUnit(businessUnit, itemNumber, data){
-    this.client.request.put(`/items/${businessUnit}/${itemNumber}/packs`, {
-      data,
-    });
+    this.client.request.put(`/items/${businessUnit}/${itemNumber}/packs`, data);
   },
   updateItemUpcs(itemNumber, data){
-    this.client.request.put(`/items/${itemNumber}/upcs`, {
-      data,
-    })
+    this.client.request.put(`/items/${itemNumber}/upcs`, data);
   },
   updateItemUpcsByBusinessUnit(businessUnit,itemNumber, data){
-    this.client.request.put(`/items/${businessUnit}/${itemNumber}/upcs`, {
-      data,
-    });
+    this.client.request.put(`/items/${businessUnit}/${itemNumber}/upcs`, data);
   },
 };
 

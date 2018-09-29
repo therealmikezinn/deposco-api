@@ -16,14 +16,10 @@ ItemReceiptResource.prototype = {
     return this.client.request.get(`/receiptlines/${businessUnit}/${orderNumber}/${itemNumber}/${packType}/${packQty}`)
   },
   update(data){
-    return this.client.request.put(`/receiptlines`, {
-      data,
-    });
+    return this.client.request.put(`/receiptlines`, data);
   },
   updateByBusinessUnit(businessUnit, data){
-    return this.client.request.put(`/receiptlines/${businessUnit}`, {
-      data,
-    });
+    return this.client.request.put(`/receiptlines/${businessUnit}`, data);
   }
 };
 
